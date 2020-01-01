@@ -7,9 +7,12 @@ jobs:
   build:
     name: run
     runs-on: ubuntu-latest
-    uses: actions/checkout@v1
 
     steps:
+      - uses: actions/checkout@v1
+      - name: Install python
+        with:
+          python-version: 3.8
       - name: Python Style Checker
         uses: andymckay/pycodestyle-action@0.1.3
 
