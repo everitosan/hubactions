@@ -1,0 +1,13 @@
+name: RUN APP
+
+on : [push]
+
+
+jobs:
+  build:
+    name: run
+    runs-on: python-latest
+
+    steps:
+      - name: Say hi
+        run: python app.py
